@@ -14,12 +14,6 @@ public class Solution2 {
             uniques.add(resto);
         }
 
-        Object []integers =  uniques.toArray();
-        int []result = new int[integers.length];
-        for(int i = 0; i < integers.length; i++) {
-            result[i] = (int)integers[i];
-        }
-
-        return result;
+        return uniques.stream().mapToInt(Integer::intValue).toArray();
     }
 }
